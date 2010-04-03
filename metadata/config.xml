@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//OpenMRS//DTD OpenMRS Config 1.2//EN" "http://resources.openmrs.org/doctype/config-1.2.dtd">
+<module configVersion="1.2">
+	<id>jquerysearchdialog</id>
+	<name>Jquerysearchdialog</name>
+	<version>0.1</version>
+	<package>org.openmrs.module.@MODULE_ID@</package>
+	<author>Jaime Hablutzel</author>
+	<description>A module to test jquerysearchdialog jquery plugin to populate a table with DWR controllers</description>
+	<activator>org.openmrs.jquerysearchdialog.JQuerySearchDialogActivator</activator>
+
+	<extension>
+		<point>org.openmrs.admin.list</point>
+		<class>org.openmrs.jquerysearchdialog.extension.html.AdminList</class>
+	</extension>
+	
+	<!--  configure dwr for DWRConceptByClassService -->
+	<dwr>
+		<allow>
+			<create creator="new" javascript="DWRConceptByClassService">
+				<param name="class" value="org.openmrs.jquerysearchdialog.web.DWRConceptByClassService"/>
+			</create>
+			<convert converter="bean" match="org.openmrs.web.dwr.ConceptListItem"/>
+		</allow>
+	</dwr>
+	
+	<messages>
+		<lang>en</lang>
+		<file>messages.properties</file>
+	</messages>
+
+</module>
+

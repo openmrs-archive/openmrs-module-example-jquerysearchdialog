@@ -1,0 +1,47 @@
+@CHARSET "ISO-8859-1";
+
+.jquerySearchDialogSearchTable td {
+	width: 100%;
+}
+
+.jquerysearchDialogTopDiv fieldset {
+	background-color: #ddd;
+}
+
+.jquerySearchDialogSearchTable tbody tr:hover {
+	cursor: default;
+	background-color: #ffcdcd;
+}
+
+
+.dataTables_wrapper {
+	position: static;
+	/*background-color: lime; */
+}
+
+.jquerysearchDialogTopDiv fieldset {
+	width: 100%;
+}
+
+.jquerysearchDialogTopDiv {
+	position: relative;
+	z-index: 10;
+}
+
+.dataTables_paginate {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+.jquerySearchDialogCloseButton {
+	border: medium none;
+	position: absolute;
+	right: 5px;
+	top: 15px;
+}
+
+.jquerySearchDialogCloseButton:hover {
+	border: 1px solid #ddd;
+	color: red;
+}
